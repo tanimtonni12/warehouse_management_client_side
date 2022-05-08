@@ -12,6 +12,7 @@ import MyItems from './components/MyItems/MyItems';
 import Register from './components/Register/Register';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import SingleInventory from './components/SingleInventory/SingleInventory';
+import ReturnPolicy from './ReturnPolicy/ReturnPolicy';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/returnPolicy" element={<ReturnPolicy></ReturnPolicy>}></Route>
         <Route path='/addItems' element={<RequireAuth><AddInventory></AddInventory></RequireAuth>}></Route>
         <Route path='/manageInventory' element={<RequireAuth><ManageInventories></ManageInventories></RequireAuth>}></Route>
         <Route path='/inventory/:id' element={<RequireAuth><SingleInventory></SingleInventory></RequireAuth>}></Route>
