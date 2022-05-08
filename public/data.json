@@ -1,0 +1,56 @@
+[
+    {
+        "name": " CHUWI HeroBook Pro Intel Celeron",
+        "price": "29,500",
+        "description": "Chuwi HeroBook Pro Intel Celeron, 8GB RAM, 256GB SSD, 14 inch Laptop-Grey.",
+        "email": "17103062iubat@gmail.com",
+        "quantity": "15",
+        "Supplier": "Chuwi Brand",
+        "img": "https://static-01.daraz.com.bd/p/7e89decafa388a5f31cb548396cd2b26.jpg"
+    },
+    {
+        "name": "CHUWI HeroBook Pro Plus",
+        "price": "48,300",
+        "description": "CHUWI HeroBook PRO Plus 13.3 inch Intel Celeron 8GB+256GB SSD, 3K FHD Display.",
+        "email": "17103062iubat@gmail.com",
+        "quantity": "20",
+        "Supplier": "Chuwi Brand",
+        "img": " https://static-01.daraz.com.bd/p/c90345ef687fa8abb12fda3aefd0c2eb.jpg "
+    },
+    {
+        "name": "Asus VivoBook ",
+        "price": "60,000",
+        "description": "Asus VivoBook 14 K413EA #EB1753T# 11th Gen i3-1115G4 1.7 to 4.1GHz , 8GB, 512           SSD, Win 10 Home, 14 FHD Laptop.",
+        "email": "17103062iubat@gmail.com",
+        "quantity": "22",
+        "Supplier": "Asus Brand",
+        "img": "https://static-01.daraz.com.bd/p/254189214df9f0a61638b30ed6835e95.jpg"
+    },
+    {
+        "name": " Asus TUF Gaming Laptop",
+        "price": "83,800",
+        "description": "Asus TUF Gaming F15 FX506LH #HN002T# 10th Gen Intel Core i5-10300H 2.5 to 4.5GHz , 8GB, 512GB SSD, GTX 1650 4GB, 15.6Inch FHD Gaming Laptop.",
+        "email": "17103062iubat@gmail.com",
+        "quantity": "25",
+        "Supplier": "Asus Brand",
+        "img": "https://static-01.daraz.com.bd/p/ef406dd42db40b6089e526208dfbd4be.jpg"
+    },
+    {
+        "name": "HP Pavilion",
+        "price": "87,500",
+        "description": "HP Pavilion 14-dv0553TU 11th Gen i7-1165G7 2.8 To 4.7GHz, 8GB, 512GB SSD, Win11 Home, 14 FHD Laptop.",
+        "email": "17103062iubat@gmail.com",
+        "quantity": "10",
+        "Supplier": "HP Brand",
+        "img": "https://static-01.daraz.com.bd/p/509c45c4380733cc473a0445b8725288.jpg"
+    },
+    {
+        "name": "Lenovo IdeaPad 3",
+        "price": "35,600",
+        "description": "Lenovo IdeaPad 3 5IGl05 (81WQ00BYIN) Intel CDC N4020 1.1 to 2.8GHz, 4GB, 256GB SSD, Win 11 Home, 15.6 HD Laptop.",
+        "email": "17103062iubat@gmail.com",
+        "quantity": "12",
+        "Supplier": "Lenovo Brand",
+        "img": "https://static-01.daraz.com.bd/p/2b4b75000debaae125b2ccb9216e583b.jpg"
+    }
+]

@@ -7,8 +7,6 @@ import dell from '../../images/dell (2).png'
 import asus from '../../images/asus (1).png'
 import acer from '../../images/acer (2).png'
 import Products from '../Products/Products';
-
-
 import './Home.css'
 
 const Home = () => {

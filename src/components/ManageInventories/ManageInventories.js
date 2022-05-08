@@ -36,7 +36,8 @@ const ManageInventories = () => {
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Supplier</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Delete</th>
+
                     </tr>
                 </thead>
 
@@ -50,7 +51,10 @@ const ManageInventories = () => {
                                 <td>{item.price}</td>
                                 <td>{item.quantity}</td>
                                 <td>{item.Supplier}</td>
-                                <td><button onClick={() => handleDelete(item._id)} className='btn text-danger'>{element}</button></td>
+                                <td><button onClick={() => handleDelete(item._id)} className='btn text-danger'>{element}</button>
+                                    <Link to={`/inventory/${item._id}`}>Manage</Link>
+                                </td>
+
                             </tr>
 
                         )}

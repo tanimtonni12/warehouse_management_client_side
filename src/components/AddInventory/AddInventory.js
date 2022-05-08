@@ -1,18 +1,23 @@
 
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from 'react-toastify';
+import auth from "../../firebase.init";
 
 const AddInventory = () => {
     const { register, handleSubmit, reset } = useForm();
+    const [user, loading] = useAuthState(auth);
 
     const onSubmit = data => {
+        const newData = { ...data, email: user.email, sold: 0 }
+
         const url = `http://localhost:5000/product`
         fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(newData)
 
 
         })

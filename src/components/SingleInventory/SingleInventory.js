@@ -6,7 +6,7 @@ import icon from '../../images/taka.png'
 const SingleInventory = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
-    const { _id, img, name, price, quantity, description, Supplier } = item;
+    const { _id, img, name, price, quantity, description, Supplier, sold } = item;
     useEffect(() => {
         const url = `http://localhost:5000/product/${id}`;
         fetch(url)
@@ -15,40 +15,46 @@ const SingleInventory = () => {
     }, [])
     const handleDelivered = () => {
         let Remaining = parseInt(+item.quantity) - 1;
-        let newInventory = { img, name, price, quantity: Remaining, description, Supplier };
-        setItem(newInventory)
-        fetch(`http://localhost:5000/product/${id}`, {
+        let newInventory = { img, name, price, quantity: Remaining, description, Supplier, sold: sold + 1 };
+
+        fetch(`http://localhost:5000/product/${id}/delivered`, {
             method: 'PUT',
-            body: JSON.stringify(newInventory),
-            headers: {
-                'Content-Type': 'application/json',
-            },
         })
             .then(res => res.json())
             .then(data => {
-                setItem(data);
+                setItem(newInventory)
                 toast("Delivered succeeded!!!!!!!!!!!")
             })
     }
 
     //restock
     const handleRestock = (e) => {
+
         e.preventDefault();
+        if (isNaN(parseInt(e.target.upQuantity.value))) {
+            return toast('please enter a number')
+
+        }
         let updatedQuantity = parseInt(+item.quantity) + parseInt(e.target.upQuantity.value);
-        let newInventory = { img, name, price, quantity: updatedQuantity, description, Supplier }
-        setItem(newInventory)
-        fetch(`http://localhost:5000/product/${id}`, {
+        if (updatedQuantity < 1) {
+            return toast('Quantity can not be 0')
+        }
+        let newInventory = { img, name, price, quantity: updatedQuantity, description, Supplier, sold }
+
+        fetch(`http://localhost:5000/product/${id}/restock`, {
             method: 'PUT',
-            body: JSON.stringify(newInventory),
+            body: JSON.stringify({ quantity: e.target.upQuantity.value }),
             headers: {
                 'Content-Type': 'application/json',
             },
         })
             .then(res => res.json())
             .then(data => {
-                setItem(data);
+                setItem(newInventory)
                 toast("Restock succeeded!!!!!!!!!!!")
             })
+
+
         e.target.reset();
 
 
@@ -75,6 +81,7 @@ const SingleInventory = () => {
                             <p className="card-text">Description: {item?.description}</p>
                             <p className="card-text">Supplier: {item?.Supplier}</p>
                             <p className="card-text">Quantity: {item?.quantity}</p>
+                            <p className="card-text">Sold: {item?.sold}</p>
 
                         </div>
                         <div>

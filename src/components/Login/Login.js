@@ -30,7 +30,7 @@ const Login = () => {
 
     if (user) {
         navigate(from, { replace: true });
-        navigate('/home')
+        navigate(from)
     }
 
     if (error) {
