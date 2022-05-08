@@ -63,7 +63,7 @@ const MyItems = () => {
                                 <td>{item.price}</td>
                                 <td>{item.quantity}</td>
                                 <td>{item.Supplier}</td>
-                                <td className='d-md-flex align-items-center justify-content-between'><button onClick={() => handleDelete(item._id)} className='btn text-danger '>{element}</button>
+                                <td className='d-md-flex align-items-center justify-content-center'><button onClick={() => handleDelete(item._id)} className='btn text-danger '>{element}</button>
                                     <Link className='text-decoration-none bg-secondary  text-white' to={`/inventory/${item._id}`}>Manage</Link>
                                 </td>
 
