@@ -1,16 +1,18 @@
 
 import useInventory from '../hooks/useInventory';
 import Product from '../Product/Product';
-import './Products.css'
+
 
 const Products = () => {
     const [products] = useInventory();
     const sliceProducts = products.slice(0, 6);
     return (
         <div className='container'>
-            <div className='text-center'>
-                <h2>Our Inventories</h2>
-                <div className="row row-cols-1 row-cols-md-3 g-5">
+            <div>
+                <div className='text-center my-3'>
+                    <h2 className='text-secondary fs-1 fw-bold'>Our Inventories</h2>
+                </div>
+                <div className="row row-cols-1 row-cols-md-3 g-5 mt-3 mb-5">
 
                     {
                         sliceProducts.map(product => <Product

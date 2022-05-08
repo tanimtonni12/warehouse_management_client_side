@@ -28,7 +28,7 @@ const ManageInventories = () => {
     }
     return (
         <div>
-            <table className="table table-striped table-hover caption-top">
+            <table className="table table-striped table-hover container caption-top">
                 <caption className='text-center fs-2 fw-bold'>List of Inventories</caption>
                 <thead className='table-danger'>
                     <tr>
@@ -59,7 +59,7 @@ const ManageInventories = () => {
             </table>
 
             <div className='text-center my-5'>
-                <button className='btn btn-secondary'><Link className='text-decoration-none text-white' to='/addInventory'>Add New Item</Link></button>
+                <button className='btn btn-secondary'><Link className='text-decoration-none text-white' to='/addItems'>Add New Item</Link></button>
             </div>
         </div>
     );
