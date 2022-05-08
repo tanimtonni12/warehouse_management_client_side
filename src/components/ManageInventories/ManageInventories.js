@@ -51,8 +51,8 @@ const ManageInventories = () => {
                                 <td>{item.price}</td>
                                 <td>{item.quantity}</td>
                                 <td>{item.Supplier}</td>
-                                <td><button onClick={() => handleDelete(item._id)} className='btn text-danger'>{element}</button>
-                                    <Link to={`/inventory/${item._id}`}>Manage</Link>
+                                <td className='d-md-flex align-items-center justify-content-center'><button onClick={() => handleDelete(item._id)} className='btn text-danger me-2'>{element}</button>
+                                    <Link className='text-decoration-none bg-secondary  text-white' to={`/inventory/${item._id}`}>Manage</Link>
                                 </td>
 
                             </tr>
@@ -60,12 +60,12 @@ const ManageInventories = () => {
                         )}
                 </tbody>
 
-            </table>
+            </table >
 
             <div className='text-center my-5'>
                 <button className='btn btn-secondary'><Link className='text-decoration-none text-white' to='/addItems'>Add New Item</Link></button>
             </div>
-        </div>
+        </div >
     );
 };
 export default ManageInventories;
