@@ -25,17 +25,17 @@ const Home = () => {
             </div>
             <Products></Products>
 
-            <div>
-                <div className='text-center my-5'>
+            <div className='bg-light py-3 px-5'>
+                <div className='text-center mb-5 '>
                     <h2 className='text-secondary fs-1 fw-bold'>Our Best Sellers</h2>
                 </div>
-                <div className='d-md-flex  align-items-center justify-content-between'>
+                <div className='d-md-flex align-items-center justify-content-between'>
                     <img src={hp} alt="" />
-                    <img src={lenovo} alt="" />
+                    <img className='ms-2' src={lenovo} alt="" />
                     <img src={mac} alt="" />
                     <img src={asus} alt="" />
                     <img src={dell} alt="" />
-                    <img src={acer} alt="" />
+                    <img className='ms-3' src={acer} alt="" />
                 </div>
 
             </div>
