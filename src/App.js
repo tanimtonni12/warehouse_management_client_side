@@ -9,8 +9,8 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import ManageInventories from './components/ManageInventories/ManageInventories';
 import MyItems from './components/MyItems/MyItems';
-import NotFound from './components/Register/NotFound/NotFound';
-
+import NotFound from './components/NotFound/NotFound';
+import QuesAns from './components/QuesAns/QuesAns';
 import Register from './components/Register/Register';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import SingleInventory from './components/SingleInventory/SingleInventory';
@@ -25,6 +25,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/qa" element={<QuesAns></QuesAns>}></Route>
         <Route path="/returnPolicy" element={<ReturnPolicy></ReturnPolicy>}></Route>
         <Route path='/addItems' element={<RequireAuth><AddInventory></AddInventory></RequireAuth>}></Route>
         <Route path='/manageInventory' element={<RequireAuth><ManageInventories></ManageInventories></RequireAuth>}></Route>

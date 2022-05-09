@@ -8,7 +8,7 @@ const SingleInventory = () => {
     const [item, setItem] = useState({});
     const { _id, img, name, price, quantity, description, Supplier, sold } = item;
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://intense-taiga-61434.herokuapp.com/product/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
@@ -17,7 +17,7 @@ const SingleInventory = () => {
         let Remaining = parseInt(+item.quantity) - 1;
         let newInventory = { img, name, price, quantity: Remaining, description, Supplier, sold: sold + 1 };
 
-        fetch(`http://localhost:5000/product/${id}/delivered`, {
+        fetch(`https://intense-taiga-61434.herokuapp.com/product/${id}/delivered`, {
             method: 'PUT',
         })
             .then(res => res.json())
@@ -32,16 +32,23 @@ const SingleInventory = () => {
 
         e.preventDefault();
         if (isNaN(parseInt(e.target.upQuantity.value))) {
-            return toast('please enter a number')
+            return toast('please enter a number');
 
         }
+        else if (parseInt(e.target.upQuantity.value) < 1) {
+            e.target.reset();
+            return toast('please enter a positive number');
+
+        }
+
+
         let updatedQuantity = parseInt(+item.quantity) + parseInt(e.target.upQuantity.value);
         if (updatedQuantity < 1) {
-            return toast('Quantity can not be 0')
+            return toast('Quantity can not be 0');
         }
         let newInventory = { img, name, price, quantity: updatedQuantity, description, Supplier, sold }
 
-        fetch(`http://localhost:5000/product/${id}/restock`, {
+        fetch(`https://intense-taiga-61434.herokuapp.com/product/${id}/restock`, {
             method: 'PUT',
             body: JSON.stringify({ quantity: e.target.upQuantity.value }),
             headers: {

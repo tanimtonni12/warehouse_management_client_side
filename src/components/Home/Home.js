@@ -17,6 +17,7 @@ const Home = () => {
             <div className='d-md-flex  justify-content-evenly align-items-center'>
 
                 <div className='p-5 '>
+                    <h2 className='text-secondary fw-bold'>Why Choose The Laptop?</h2>
                     <p className=' w-100 text-dark text-align fs-4'>In today’s date, laptops are a necessity. While the design of laptop devices has evolved constantly over the past decades,We are dealing with the top laptop brands such as HP, Dell, Acer, Apple, chuwi, Gigabyte, and Lenovo. Our suppliers supply the original and fresh products which is directly imported from abroad. </p>
                 </div>
                 <div className='p-5 '>
@@ -40,14 +41,14 @@ const Home = () => {
 
             </div>
 
-            <div>
-                <div className='text-center my-5'>
+            <div className='bg-light px-3'>
+                <div className='text-center mt-5'>
                     <h2 className='text-secondary fs-1 fw-bold'>Delivery</h2>
                 </div>
-                <div className='my-5 fs-4'>
+                <div className='mb-5 mt-3 fs-4 text-align'>
                     <p>As all our deliveries are exclusively handled, we try to dispatch our products within 1 day with a 48hr delivery timescale. All tracking id will sent by emailed.</p>
-                    <p>Our products should arrive in perfect condition. Any problems please do not hesitate to contact us either through our contact page, by email or directly by phone.</p>
-                    <p>Please check our <Link to='/returnPolicy' className='text-decoration-none'>Returns Policy</Link> for returning goods.</p>
+                    <p>Our products should arrive in perfect condition. Any problems please do not hesitate to contact us either through our contact number, or by email.</p>
+                    <p className='pb-3'>Please check our <Link to='/returnPolicy' className='text-decoration-none'>Returns Policy</Link> for returning goods.</p>
                 </div>
 
             </div>

@@ -52,7 +52,7 @@ const ManageInventories = () => {
                                 <td>{item.quantity}</td>
                                 <td>{item.Supplier}</td>
                                 <td className='d-md-flex align-items-center justify-content-center'><button onClick={() => handleDelete(item._id)} className='btn text-danger me-2'>{element}</button>
-                                    <Link className='text-decoration-none bg-secondary  text-white' to={`/inventory/${item._id}`}>Manage</Link>
+                                    <Link className='text-decoration-none bg-secondary text-white' to={`/inventory/${item._id}`}>Manage</Link>
                                 </td>
 
                             </tr>

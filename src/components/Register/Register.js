@@ -51,7 +51,7 @@ const Register = () => {
     return (
         <div className='shadow w-50 mx-auto p-3 bg-body rounded my-5'>
             <div className='register-form'>
-                <h2 className='text-dark text-center my-3'>Please Register</h2>
+                <h2 className='text-secondary fw-bold text-center my-3'>Please Register</h2>
                 <Form className='w-75 mx-auto' onSubmit={handleRegister}>
                     <Form.Group className="mb-3" >
                         <Form.Control ref={nameRef} type="text" placeholder="Enter Name" required />

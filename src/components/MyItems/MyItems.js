@@ -25,7 +25,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('are you sure that you want to delete this item?');
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://intense-taiga-61434.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -64,7 +64,7 @@ const MyItems = () => {
                                 <td>{item.quantity}</td>
                                 <td>{item.Supplier}</td>
                                 <td className='d-md-flex align-items-center justify-content-center'><button onClick={() => handleDelete(item._id)} className='btn text-danger '>{element}</button>
-                                    <Link className='text-decoration-none bg-secondary  text-white' to={`/inventory/${item._id}`}>Manage</Link>
+                                    <Link className='text-decoration-none bg-secondary text-white' to={`/inventory/${item._id}`}>Manage</Link>
                                 </td>
 
                             </tr>

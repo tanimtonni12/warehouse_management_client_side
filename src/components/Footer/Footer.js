@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import app from '../../images/App Store Badgeapple.png'
 import playStore from '../../images/Google Play Badge.png'
 
@@ -13,6 +14,10 @@ const Footer = () => {
                         <p className="text-white "><small>
                             © Laptop WareHouse Ltd. All rights reserved
                         </small></p>
+                        <p className="text-white "><small>
+                            Contact Us: +880181093933
+                        </small></p>
+                        <Link className='text-decoration-none text-white' to='/returnPolicy'><small>Return Policy</small></Link>
                     </div>
                     <div className="col-lg-2 col-md-6 col-sm-12">
                         <div className="row text-lg-start text-center">

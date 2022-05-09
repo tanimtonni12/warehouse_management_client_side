@@ -4,7 +4,7 @@ const useInventory = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://intense-taiga-61434.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
