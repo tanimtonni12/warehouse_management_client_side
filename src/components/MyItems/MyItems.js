@@ -13,7 +13,7 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/product/my?email=${email}`;
+            const url = `https://intense-taiga-61434.herokuapp.com/product/my?email=${email}`;
             await fetch(url)
                 .then(res => res.json())
                 .then(data => setItems(data))

@@ -13,7 +13,7 @@ const ManageInventories = () => {
     const handleDelete = id => {
         const proceed = window.confirm('are you sure that you want to delete this item?');
         if (proceed) {
-            const url = `https://intense-taiga-61434.herokuapp.com/${id}`;
+            const url = `https://intense-taiga-61434.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
