@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import icon from '../../images/taka.png'
-
+// comment
 const SingleInventory = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
@@ -38,9 +38,7 @@ const SingleInventory = () => {
         else if (parseInt(e.target.upQuantity.value) < 1) {
             e.target.reset();
             return toast('please enter a positive number');
-
         }
-
 
         let updatedQuantity = parseInt(+item.quantity) + parseInt(e.target.upQuantity.value);
         if (updatedQuantity < 1) {
@@ -104,8 +102,12 @@ const SingleInventory = () => {
                         </div>
 
                     </div>
+                    <div className='text-center my-5'>
+                        <button className='btn btn-secondary'><Link className='text-decoration-none text-white' to='/manageInventory'>Add New Item</Link></button>
+                    </div>
                 </div>
             </div>
+
         </div>
     );
 };

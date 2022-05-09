@@ -8,8 +8,6 @@ import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -57,7 +55,7 @@ const Login = () => {
         })
             .then(res => res.json())
             .then(data => {
-                localStorage.setItem('accessToken', data.accessToken)
+                localStorage.setItem('accessToken', data.accessToken);
                 navigate(from, { replace: true });
 
 
