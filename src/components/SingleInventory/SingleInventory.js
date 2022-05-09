@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import icon from '../../images/taka.png'
-// comment
+
 const SingleInventory = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
@@ -103,7 +103,7 @@ const SingleInventory = () => {
 
                     </div>
                     <div className='text-center my-5'>
-                        <button className='btn btn-secondary'><Link className='text-decoration-none text-white' to='/manageInventory'>Add New Item</Link></button>
+                        <button className='btn btn-secondary'><Link className='text-decoration-none text-white' to='/manageInventory'>Manage Inventory</Link></button>
                     </div>
                 </div>
             </div>
