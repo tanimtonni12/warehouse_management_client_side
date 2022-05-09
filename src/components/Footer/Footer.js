@@ -17,12 +17,15 @@ const Footer = () => {
                         <p className="text-white "><small>
                             Contact Us: +880181093933
                         </small></p>
-                        <Link className='text-decoration-none text-white' to='/returnPolicy'><small>Return Policy</small></Link>
+                        <p className="text-white "><small>
+                            Email: laptopwarehouse@ltd.com
+                        </small></p>
+                        <Link className='text-decoration-none text-white ' to='/returnPolicy'><small>Return Policy</small></Link>
                     </div>
                     <div className="col-lg-2 col-md-6 col-sm-12">
                         <div className="row text-lg-start text-center">
                             <div className="col-lg-12 col-md-12 mb-3">
-                                <h5 className="text-white">Get The App</h5>
+                                <h5 className="text-white mt-3">Get The App</h5>
 
                             </div>
                             <div className="col-lg-12 col-md-12 col-sm-12 mb-3">

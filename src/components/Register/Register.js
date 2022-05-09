@@ -12,8 +12,6 @@ const Register = () => {
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passRef = useRef('');
-
-
     const [
         createUserWithEmailAndPassword,
         user,
