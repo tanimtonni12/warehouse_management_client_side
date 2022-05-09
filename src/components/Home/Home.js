@@ -25,6 +25,9 @@ const Home = () => {
                 </div>
             </div>
             <Products></Products>
+            <div className='text-center my-5'>
+                <button className='btn btn-secondary fw-bold'><Link className='text-decoration-none text-white' to='/manageInventory'>Manage Inventory</Link></button>
+            </div>
 
             <div className='bg-light py-3 px-5'>
                 <div className='text-center mb-5 '>
